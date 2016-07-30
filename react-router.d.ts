@@ -1,5 +1,3 @@
-/// <reference path="typings/main.d.ts" />
-
 import * as React from "react";
 import {LocationDescriptor, Query, Location, History, HistoryOptions, CreateHistory, BasenameOptions, QueryOptions} from "history";
 
@@ -737,11 +735,9 @@ declare module ReactRouter {
 
 	//Utilities
 	export interface IMatchArgs extends BasenameOptions, QueryOptions {
-		routes: RouteConfig;
-
-		location: Location;
-
 		history?: History;
+		location: Location | string;
+		routes: RouteConfig;
 	}
 
 
